@@ -1,0 +1,181 @@
+@font-face {
+  font-family: 'Akzidenz Grotesque';
+  src: url('../fonts/akzidenz-grotesque.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #0f0f0f;
+  background-color: #202121;
+}
+
+::-webkit-scrollbar {
+  background-color: #202121;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #37393a;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #37393a;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.stage {
+  width: 100%;
+  height: 100%;
+}
+.canvas-container {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+}
+#spinner-wrapper {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+#error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 40px;
+}
+
+#signInFormWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: 5px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+/* The sidepanel menu */
+.sidepanel {
+  height: 100%; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #ddd; /* Black*/
+  overflow: hidden; /* Disable horizontal scroll */
+
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+.sidepanel .navigationWrapper {
+  overflow-y: auto;
+  height: 100%;
+  padding-top: 50px;
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidepanel a:not(.closebtn) {
+  cursor: pointer;
+  width: 240px;
+}
+.sidepanel a img {
+  width: 200px;
+  height: 150px;
+  border: 2px solid grey;
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 25.6px 57.6px 0px, rgba(0, 0, 0, 0.18) 0px 4.8px 14.4px 0px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: black;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #cccccc;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+}
+
+.openbtn:hover {
+  background-color: white;
+}

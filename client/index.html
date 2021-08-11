@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <title>Mission to mars.</title>
+  </head>
+  <body>
+
+    <div class="text-center" id="spinner-wrapper">
+      <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    <div id="signInFormWrapper" class="text-center d-none">
+      <form  class="form-signin" id="signInForm">
+        <h1 class="h3 mb-3 font-weight-normal" id="title">Please Enter Password</h1>
+        <input type="password" id="password" class="form-control mb-2" placeholder="Password" required>
+        <div class="alert alert-danger d-none" id="invalid-password" role="alert">
+          Invalid Password!
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+    </div>
+    <div id="container" class="d-none">
+      <div id="mySidepanel" class="sidepanel">
+        <div class="navigationWrapper">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a onclick="navigate(1)"> <img src="/assets/images/nav-1-min.jpg"/> </a>
+          <a onclick="navigate(2)"> <img src="/assets/images/nav-2-min.jpg"/> </a>
+          <a onclick="navigate(3)"> <img src="/assets/images/nav-3-min.jpg"/> </a>
+          <a onclick="navigate(4)"> <img src="/assets/images/nav-4-min.jpg"/> </a>
+          <a onclick="navigate(5)"> <img src="/assets/images/nav-5-min.jpg"/> </a>
+          <a onclick="navigate(6)"> <img src="/assets/images/nav-6-min.jpg"/> </a>
+          <a onclick="navigate(7)"> <img src="/assets/images/nav-7-min.jpg"/> </a>
+          <a onclick="navigate(8)"> <img src="/assets/images/nav-8-min.jpg"/> </a>
+          <a onclick="navigate(9)"> <img src="/assets/images/nav-9-min.jpg"/> </a>
+        </div>
+      </div>
+      <button class="openbtn" onclick="openNav()">&#9776;</button>
+      <canvas id="stage"></canvas>
+    </div>
+    <div id="error-page" class="d-none">
+      Invalid URL!
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.1.0/fontfaceobserver.standalone.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.socket.io/3.1.1/socket.io.min.js" integrity="sha384-gDaozqUvc4HTgo8iZjwth73C6dDDeOJsAgpxBcMpZYztUfjHXpzrpdrHRdVp8ySO" crossorigin="anonymous"></script>
+    <script src="/assets/scripts/vendors/fabric.4.3.0.min.js"></script>
+    <script src="/assets/scripts/vendors/lodash.1.8.3.min.js"></script>
+    <script src="/assets/scripts/vendors/pusher.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+    <script src="/assets/scripts/fabricExtension.js"></script>
+    <script src="/assets/scripts/stage.js"></script>
+    <script src="/assets/scripts/collaboration.js"></script>
+    <script src="/assets/scripts/main.js"></script>
+    <script src="/assets/scripts/auth.js"></script>
+  </body>
+</html>

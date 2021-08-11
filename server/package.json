@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "knex migrate:latest",
+    "migrate:make": "knex migrate:make",
+    "migrate:rollback": "knex migrate:rollback"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bookshelf": "^1.2.0",
+    "bookshelf-uuid": "^1.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "knex": "^0.21.15",
+    "lodash": "^4.17.20",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "pg": "^8.5.1",
+    "pusher": "^4.0.2",
+    "socket.io": "^3.1.1",
+    "socket.io-client": "^3.1.1",
+    "uniqid": "^5.2.0"
+  }
+}
